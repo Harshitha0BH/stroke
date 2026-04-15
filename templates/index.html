@@ -1,0 +1,41 @@
+﻿{% extends 'base.html' %}
+
+{% block content %}
+<section class="main-hero">
+    <div class="hero-copy">
+        <span class="eyebrow">Stroke Risk Prediction</span>
+        <h1>Predict, prevent, and protect with smart health insights.</h1>
+        <p>StrokeSafe combines proven clinical data with intuitive user flows so patients, doctors, and caregivers can act fast with confidence.</p>
+        <div class="hero-buttons">
+            <a href="/user_login" class="cta-button">Start Assessment</a>
+            <a href="/health_tips" class="cta-button">View Health Tips</a>
+        </div>
+    </div>
+    <div class="hero-figure">
+        <div>
+            <h3>Key Benefits</h3>
+            <div class="grid-cards">
+                <div class="feature-card">
+                    <h3>Easy Assessment</h3>
+                    <p>Complete the risk form in under a minute with guided selections.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Doctor Ready</h3>
+                    <p>Secure doctor access and dashboard-ready view for clinical review.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Personal Guidance</h3>
+                    <p>Receive an immediate risk rating and lifestyle-based recommendations.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="card-section">
+    <div class="card">
+        <h2>How StrokeSafe Works</h2>
+        <p>Enter your health details, review your risk probability, and access clear next-step advice. The app uses a trained model to identify stroke risk factors and present them in a friendly, clinical format.</p>
+    </div>
+</section>
+{% endblock %}

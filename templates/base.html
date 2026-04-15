@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title | default('Stroke Prediction System') }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="page-shell">
+        <header class="site-header">
+            <div class="brand">
+                <a href="/">StrokeSafe</a>
+                <span class="brand-tag">AI risk assessment</span>
+            </div>
+            <nav class="site-nav">
+                <a href="/">Home</a>
+                <a href="/health_tips">Health Tips</a>
+                {% if session.get('user') %}
+                    <a href="/predict">Predict</a>
+                {% endif %}
+                {% if session.get('doctor') %}
+                    <a href="/doctor_dashboard">Dashboard</a>
+                {% endif %}
+                {% if session.get('user') or session.get('doctor') %}
+                    <a href="/logout" class="nav-cta">Logout</a>
+                {% else %}
+                    <a href="/doctor_login" class="nav-cta">Doctor Login</a>
+                {% endif %}
+            </nav>
+        </header>
+
+        <main class="page-content">
+            {% block content %}{% endblock %}
+        </main>
+
+        <footer class="site-footer">
+            <p>StrokeSafe • Modern stroke risk prediction with clear guidance and expert-friendly dashboards.</p>
+        </footer>
+    </div>
+</body>
+</html>

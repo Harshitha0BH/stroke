@@ -1,0 +1,32 @@
+﻿{% extends 'base.html' %}
+
+{% block content %}
+<section class="card">
+    <h2>Doctor Dashboard</h2>
+    <p>Welcome, Doctor. Review the latest assessment summary and access patient recommendations quickly.</p>
+</section>
+
+<section class="dashboard-grid">
+    <div class="metric-card">
+        <h3>Active Assessments</h3>
+        <p>Count of current patient analyses, updated in real time.</p>
+    </div>
+    <div class="metric-card">
+        <h3>High Risk Alerts</h3>
+        <p>Patients with a high probability score who require immediate review.</p>
+    </div>
+    <div class="metric-card">
+        <h3>Clinical Notes</h3>
+        <p>Quick access to patient guidance and next-step instructions.</p>
+    </div>
+</section>
+
+<section class="card">
+    <h3>Overview</h3>
+    <p>This dashboard is designed for fast doctor workflows. In a production-ready version, patient results, history, and risk trends would appear here for further review.</p>
+    <div class="actions">
+        <a href="/logout" class="btn">Logout</a>
+        <a href="/health_tips" class="btn">Health Tips</a>
+    </div>
+</section>
+{% endblock %}

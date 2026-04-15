@@ -1,0 +1,27 @@
+﻿{% extends 'base.html' %}
+
+{% block content %}
+<section class="card result-card">
+    <div class="result-stage">
+        <h2>Your Personalized Risk Summary</h2>
+        <p><strong>Risk Probability:</strong> {{ "%.2f"|format(prob * 100) }}%</p>
+        <p><strong>Risk Stage:</strong> {{ stage }}</p>
+        <p><strong>Recommendation:</strong> {{ advice }}</p>
+    </div>
+
+    <div class="result-meter">
+        <div class="meter-circle">
+            <span>{{ "%.0f"|format(prob * 100) }}%</span>
+        </div>
+    </div>
+
+    <div class="chart">
+        <img src="{{ result_url }}" alt="Risk Chart">
+    </div>
+
+    <div class="actions">
+        <a href="/predict" class="btn">Predict Again</a>
+        <a href="/logout" class="btn">Back to Home</a>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,18 @@
+﻿{% extends 'base.html' %}
+
+{% block content %}
+<section class="card form-card">
+    <div class="card">
+        <h2>User Login</h2>
+        <p>Sign in to begin your stroke risk assessment. Your name helps personalize the experience.</p>
+    </div>
+    <form method="POST" class="form">
+        <div class="form-group">
+            <label for="username">Name</label>
+            <input type="text" name="username" id="username" placeholder="Enter your name" required>
+        </div>
+        <button type="submit" class="btn">Continue</button>
+    </form>
+    <a href="/" class="back-link">Back to Home</a>
+</section>
+{% endblock %}
